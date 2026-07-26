@@ -12,6 +12,7 @@ triagem inicial, deixando o chamado mais claro para quem vai atendê-lo.
 A API está publicada no Railway e pode ser testada pela documentação interativa:
 
 [🌐 Abrir o Swagger do SupportFlow AI](https://supportflow-ai-production.up.railway.app/docs)
+
 Stack: TypeScript, Fastify, SQLite, Zod, Vitest, Swagger e GitHub Actions.
 
 ## O que o projeto faz
