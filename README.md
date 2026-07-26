@@ -1,5 +1,7 @@
 # SupportFlow AI
 
+[![CI](https://github.com/daniel-moulaz/supportflow-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/daniel-moulaz/supportflow-ai/actions/workflows/ci.yml)
+
 Criei este projeto para praticar TypeScript em um problema próximo da minha
 rotina: receber uma solicitação de suporte, organizar as informações e indicar
 o melhor encaminhamento.
@@ -53,6 +55,21 @@ Precisa de atendimento humano: Sim
 - testes com Vitest;
 - documentação OpenAPI com Swagger UI;
 - organização do código em camadas.
+
+## Integração contínua
+
+O GitHub Actions executa automaticamente a compilação e os testes sempre que
+há um push na `main` ou um Pull Request direcionado para ela.
+
+O fluxo automatizado executa:
+
+```text
+npm ci
+npm run build
+npm test
+```
+
+O resultado pode ser acompanhado na aba **Actions** do repositório.
 
 ## Como executar
 

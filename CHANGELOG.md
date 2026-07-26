@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.0 — 26/07/2026
+
+- configurada integração contínua com GitHub Actions;
+- build e testes passam a ser executados automaticamente;
+- workflow configurado para pushes e Pull Requests na `main`;
+- adicionado badge de status da CI ao README.
+
 ## 1.3.0 — 26/07/2026
 
 - adicionada documentação interativa com Swagger UI;
