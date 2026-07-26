@@ -51,6 +51,7 @@ Precisa de atendimento humano: Sim
 - validação com Zod;
 - SQLite;
 - testes com Vitest;
+- documentação OpenAPI com Swagger UI;
 - organização do código em camadas.
 
 ## Como executar
@@ -73,6 +74,14 @@ O banco é criado automaticamente em:
 ```text
 data/supportflow.db
 ```
+
+A documentação interativa fica disponível em:
+
+```text
+http://localhost:3333/docs
+```
+
+Nessa página é possível visualizar e testar as rotas pelo navegador.
 
 ## Testes
 
@@ -171,7 +180,7 @@ Mais detalhes estão em [docs/uso-de-ia.md](docs/uso-de-ia.md).
 
 ## Próximos passos
 
-- adicionar Swagger;
+- publicar a documentação junto com a API;
 - criar uma interface simples;
 - permitir comentários no histórico do chamado;
 - integrar uma LLM de forma opcional;
