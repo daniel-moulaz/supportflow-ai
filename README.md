@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/daniel-moulaz/supportflow-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/daniel-moulaz/supportflow-ai/actions/workflows/ci.yml)
 
-Criei este projeto para praticar TypeScript aplicando conceitos de suporte técnico, automação e APIs REST em um problema próximo da minha rotina: receber uma solicitação, organizar as informações e indicar o melhor encaminhamento.
+Criei este projeto para praticar TypeScript aplicando conceitos de suporte técnico, automação e APIs REST a um problema próximo da minha rotina: receber uma solicitação, organizar as informações e indicar o melhor encaminhamento.
 
 A ideia não é substituir uma equipe de atendimento. O objetivo é automatizar a
 triagem inicial, deixando o chamado mais claro para quem vai atendê-lo.
@@ -13,7 +13,7 @@ A API está publicada no Railway e pode ser testada pela documentação interati
 
 [🌐 Abrir o Swagger do SupportFlow AI](https://supportflow-ai-production.up.railway.app/docs)
 
-Stack: TypeScript, Fastify, SQLite, Zod, Vitest, Swagger e GitHub Actions.
+**Stack:** TypeScript, Fastify, SQLite, Zod, Vitest, Swagger e GitHub Actions.
 
 ## O que o projeto faz
 
