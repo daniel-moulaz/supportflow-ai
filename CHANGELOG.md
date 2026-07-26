@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0 — 26/07/2026
+
+- adicionada documentação interativa com Swagger UI;
+- adicionada especificação OpenAPI das rotas;
+- documentados exemplos, filtros, respostas e erros;
+- adicionado teste automatizado para a documentação;
+- criada branch específica para a evolução da API.
+
 ## 1.2.0 — 26/07/2026
 
 - adicionado responsável pelo chamado;

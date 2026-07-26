@@ -54,13 +54,29 @@ Antes de enviar a resposta, o presenter acrescenta rótulos como `Alta` e
 `Aberto`. Assim, a lógica interna continua padronizada e a saída fica mais
 amigável.
 
-## 6. Testes
+## 6. Documentação OpenAPI
 
-Os testes verificam três partes:
+O `@fastify/swagger` lê os schemas definidos nas rotas e gera uma especificação
+OpenAPI.
+
+O `@fastify/swagger-ui` transforma essa especificação em uma página interativa
+disponível em:
+
+```text
+http://localhost:3333/docs
+```
+
+Usei os schemas do Zod para gerar a documentação dos corpos das requisições.
+Os schemas de resposta ficam em `src/docs/openapi.schemas.ts`.
+
+## 7. Testes
+
+Os testes verificam quatro partes:
 
 - regras de classificação;
 - comportamento das rotas;
-- persistência do banco.
+- persistência do banco;
+- geração da documentação OpenAPI.
 
 O teste de persistência fecha o banco, abre novamente e confirma que o chamado
 continua salvo.
@@ -68,7 +84,6 @@ continua salvo.
 ## O que ainda quero entender melhor
 
 - migrations de banco de dados;
-- documentação OpenAPI;
 - autenticação;
 - integração segura com modelos de linguagem;
 - deploy e observabilidade.
