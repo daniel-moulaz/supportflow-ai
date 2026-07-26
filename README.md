@@ -9,6 +9,12 @@ o melhor encaminhamento.
 A ideia não é substituir uma equipe de atendimento. O objetivo é automatizar a
 triagem inicial, deixando o chamado mais claro para quem vai atendê-lo.
 
+## Demonstração online
+
+A API está publicada no Railway e pode ser testada pela documentação interativa:
+
+[🌐 Abrir o Swagger do SupportFlow AI](https://supportflow-ai-production.up.railway.app/docs)
+
 ## O que o projeto faz
 
 Quando uma mensagem chega, a API:
