@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.0 — 26/07/2026
+
+- adicionada configuração de deploy para Railway;
+- configurados build, start command e health check;
+- documentada a criação de volume persistente para SQLite;
+- documentadas as variáveis de ambiente e a geração do domínio público.
+
 ## 1.4.0 — 26/07/2026
 
 - configurada integração contínua com GitHub Actions;
