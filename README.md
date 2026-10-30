@@ -7,9 +7,16 @@ Criei este projeto para praticar TypeScript aplicando conceitos de suporte técn
 A ideia não é substituir uma equipe de atendimento. O objetivo é automatizar a
 triagem inicial, deixando o chamado mais claro para quem vai atendê-lo.
 
+**Como a triagem funciona hoje:** a classificação de categoria e prioridade é
+feita por **regras e palavras-chave** (`src/services/ticket-classifier.ts`),
+sem chamar nenhum modelo de linguagem. A classificação por LLM está no roadmap;
+o `.env.example` já reserva a variável `LLM_PROVIDER` (com `mock` como valor
+previsto), mas ela ainda não é lida pelo código.
+
 ## Demonstração online
 
-A API está publicada no Railway e pode ser testada pela documentação interativa:
+A API está publicada no Railway ([como foi configurado](docs/deploy-railway.md))
+e pode ser testada pela documentação interativa:
 
 [🌐 Abrir o Swagger do SupportFlow AI](https://supportflow-ai-production.up.railway.app/docs)
 
@@ -20,7 +27,7 @@ A API está publicada no Railway e pode ser testada pela documentação interati
 Quando uma mensagem chega, a API:
 
 - valida os dados recebidos;
-- identifica a categoria e a prioridade;
+- identifica a categoria e a prioridade (por regras e palavras-chave);
 - gera um resumo;
 - sugere uma primeira resposta;
 - informa se o caso precisa de uma pessoa;
@@ -132,6 +139,22 @@ Os testes cobrem:
 | PATCH | `/tickets/:id/assignee` | Define ou remove o responsável |
 | GET | `/metrics` | Exibe métricas simples |
 
+## Criando um chamado com curl (bash)
+
+```bash
+curl -X POST http://localhost:3333/tickets \
+  -H "Content-Type: application/json" \
+  -d '{"customer":"Maria","channel":"whatsapp","message":"Meu pagamento foi aprovado, mas ainda nao tenho acesso ao curso."}'
+```
+
+Os canais aceitos são `whatsapp`, `email`, `chat` e `portal`. Para consultar a
+API publicada sem criar dados, use as rotas de leitura:
+
+```bash
+curl https://supportflow-ai-production.up.railway.app/health
+curl https://supportflow-ai-production.up.railway.app/metrics
+```
+
 ## Criando um chamado no PowerShell
 
 ```powershell
@@ -195,19 +218,19 @@ Mais detalhes estão em [docs/uso-de-ia.md](docs/uso-de-ia.md).
 
 ## Limitações atuais
 
-- a classificação ainda usa regras por palavras-chave;
-- não há autenticação;
+- a classificação ainda usa regras por palavras-chave (sem LLM);
+- não há autenticação: a API publicada é pública e de demonstração, então não
+  envie dados reais;
 - não existe interface visual;
-- as métricas ainda são simples;
-- o projeto ainda não está publicado em um servidor.
+- as métricas ainda são simples.
 
 ## Próximos passos
 
-- publicar a documentação junto com a API;
+- classificação por LLM opcional, ativada por `LLM_PROVIDER` (começando por um
+  provedor `mock` para os testes), mantendo as regras atuais como fallback;
 - criar uma interface simples;
 - permitir comentários no histórico do chamado;
-- integrar uma LLM de forma opcional;
-- publicar a API.
+- adicionar autenticação antes de aceitar dados reais.
 
 ## Observação
 
